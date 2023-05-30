@@ -16,11 +16,13 @@
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>
     <string name="close">Close</string>
+    <string name="register">Register</string>
 
     <!-- Strings used for fragments for navigation -->
     <string name="home_fragment_label">Home Fragment</string>
     <string name="login_fragment_label">Login Fragment</string>
     <string name="setting_fragment_label">Setting Fragment</string>
+    <string name="register_fragment_label">Register Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
@@ -36,6 +38,12 @@
     <string name="feedback_title">Feedback</string>
     <string name="feedback_successfully_sent">Feedback successfully sent</string>
     <string name="feedback_validation_error_message">Write your feedback here</string>
+
+    // Register Dialog
+    <string name="register_hint">Enter your registration code here</string>
+    <string name="register_title">Register</string>
+    <string name="register_success">Registered successfully</string>
+    <string name="register_error_message">Failed to register</string>
     
     //Setting Dialog
     <string name="setting_title">Setting</string>

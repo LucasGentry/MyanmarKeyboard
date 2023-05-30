@@ -85,6 +85,10 @@ class HomeFragment : Fragment() {
         binding.loginButton.setOnClickListener {
             findNavController().navigate(R.id.action_HomeFragment_to_LoginFragment)
         }
+
+        binding.settingButton.setOnClickListener {
+            findNavController().navigate(R.id.action_HomeFragment_to_RegisterFragment)
+        }
     }
 
     private fun enableKeyboard() {

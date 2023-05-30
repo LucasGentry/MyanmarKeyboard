@@ -2,7 +2,7 @@
 package com.galaxy.keyboard.helper
 
 object GalaxyConstant {
-    const val APP_DEVELOPER: String = "Kitty Galaxy"
+    const val APP_DEVELOPER: String = "SoftGiant"
     const val BACKSPACE_KEY_CODE = -5
     const val ENTER_KEY_CODE = -4
     const val SPACE_KEY_CODE = 32

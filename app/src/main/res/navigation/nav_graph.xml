@@ -14,14 +14,22 @@
             android:id="@+id/action_HomeFragment_to_LoginFragment"
             app:destination="@id/LoginFragment" />
         <action
-            android:id="@+id/action_HomeFragment_to_SettingFragment"
-            app:destination="@id/LoginFragment" />
+            android:id="@+id/action_HomeFragment_to_RegisterFragment"
+            app:destination="@id/RegisterFragment" />
     </fragment>
     <fragment
         android:id="@+id/LoginFragment"
         android:name="com.galaxy.keyboard.fragment.LoginFragment"
         android:label="@string/login_fragment_label"
         tools:layout="@layout/fragment_login">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/RegisterFragment"
+        android:name="com.galaxy.keyboard.fragment.RegisterFragment"
+        android:label="@string/register_fragment_label"
+        tools:layout="@layout/fragment_register">
 
     </fragment>
 </navigation>
