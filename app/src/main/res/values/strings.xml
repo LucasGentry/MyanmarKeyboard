@@ -72,6 +72,8 @@
 
     <string name="wanna_delete_prediction">Do you really want to delete this prediction word?</string>
 
+    <string name="msg_expired">Trial has been expired. Please, register to activate MyanmarKeyboard!</string>
+
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
         volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus

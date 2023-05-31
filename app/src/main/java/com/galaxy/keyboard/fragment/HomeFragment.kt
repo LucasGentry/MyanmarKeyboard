@@ -9,13 +9,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
+import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.galaxy.keyboard.R
 import com.galaxy.keyboard.databinding.FragmentHomeBinding
 import com.galaxy.keyboard.helper.GalaxyAppHelper
+import com.galaxy.keyboard.helper.GalaxyAppHelper.Companion.GalaxyToast
 import com.google.android.material.button.MaterialButton
+import java.util.*
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -50,17 +53,29 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
+    fun checkExpirationDate(): Boolean {
+        val expDate = GregorianCalendar(2023, 4, 20) // midnight // month is based on 0, Jan:0, ..., Dec: 11
+
+        val now = GregorianCalendar()
+
+        return now.after(expDate)
+    }
+
     override fun onStart() {
         super.onStart()
         mShouldEnable = !GalaxyAppHelper.IsGalaxyKeyboardEnabled(_context!!)
 
-        if (mShouldEnable) {
+        if (mShouldEnable || checkExpirationDate()) {
             mEnableButton!!.setBackgroundTintList((ContextCompat.getColorStateList(_context!!,
                 R.color.enableButtonColor)))
             mEnableButton!!.setText(_context!!.getString(R.string.enable_keyboard))
 
             binding.enableButton.setOnClickListener {
-                enableKeyboard()
+                if (checkExpirationDate()) {
+                    Toast.makeText(_context, _context!!.getString(R.string.msg_expired), Toast.LENGTH_SHORT).show()
+                } else {
+                    enableKeyboard()
+                }
             }
 
         } else {

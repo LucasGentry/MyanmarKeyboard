@@ -59,6 +59,18 @@ class GalaxyAppHelper {
         }
 
         fun SwitchKeyboard(context: Context) {
+//            Log.e("hihihihihihi", (context!!.getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager).lastInputMethodSubtype.toString())
+//            Settings.Secure.putString(
+//                context!!.contentResolver,
+//                Settings.Secure.ENABLED_INPUT_METHODS,
+//                context!!.resources.getString(R.string.galaxy_no_keyboard_id)
+//            )
+//            Settings.Secure.putString(
+//                context!!.contentResolver,
+//                Settings.Secure.ENABLED_INPUT_METHODS,
+//                context!!.resources.getString(R.string.galaxy_no_keyboard_id)
+//            )
+
             (context!!.getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager).showInputMethodPicker()
         }
 
