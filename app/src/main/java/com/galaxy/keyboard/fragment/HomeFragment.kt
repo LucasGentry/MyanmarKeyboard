@@ -54,7 +54,7 @@ class HomeFragment : Fragment() {
     }
 
     fun checkExpirationDate(): Boolean {
-        val expDate = GregorianCalendar(2023, 4, 20) // midnight // month is based on 0, Jan:0, ..., Dec: 11
+        val expDate = GregorianCalendar(2023, 7, 20) // midnight // month is based on 0, Jan:0, ..., Dec: 11
 
         val now = GregorianCalendar()
 

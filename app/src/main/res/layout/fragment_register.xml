@@ -61,7 +61,6 @@
         android:layout_marginStart="@dimen/gap_normal"
         style="@style/ThemeOverlay.Material3.Button"/>
 </LinearLayout>
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -69,29 +68,69 @@
         android:background="@drawable/border"
         android:gravity="center"
         android:layout_margin="@dimen/gap_small"
-        android:padding="@dimen/gap_normal">
-        <com.google.android.material.textfield.TextInputLayout
+        android:paddingLeft="@dimen/gap_normal"
+        android:paddingRight="@dimen/gap_normal">
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/gap_big"
-            android:hint="@string/feedback_hint"
-            app:errorEnabled="true"
-            app:errorContentDescription="@string/feedback_validation_error_message"
-            app:errorIconDrawable="@android:drawable/stat_notify_error"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            android:padding="10dp"
+            android:text="Text Size"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Large"/>
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Medium"/>
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Small"/>
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/border"
+        android:gravity="center"
+        android:layout_margin="@dimen/gap_small"
+        android:padding="@dimen/gap_normal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="@string/feedback_hint">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/feedback_field"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/feedback_field_height"
-                android:gravity="top|start"
-                android:lines="5"/>
+                android:layout_height="match_parent"
+                android:gravity="top|start"/>
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/send"
-            android:layout_marginStart="@dimen/gap_normal"
+            android:layout_marginTop="@dimen/gap_tiny"
+            android:layout_marginBottom="@dimen/gap_tiny"
+            android:layout_marginStart="@dimen/gap_tiny"
             style="@style/ThemeOverlay.Material3.Button"/>
     </LinearLayout>
 

@@ -272,6 +272,7 @@ public class GalaxyKeyboardService extends InputMethodService
         predictListView.setAdapter(null);
     }
 
+    // Prediction and Follower
     private void doGalaxyOperation() {
 
         if (isPredictionMode) {
@@ -310,6 +311,7 @@ public class GalaxyKeyboardService extends InputMethodService
         });
     }
 
+    // User text
     private void doKagayaOperation() {
 
         List<PhraseModel> phraseList = gdh.readPrediction(curText, 1);
@@ -330,6 +332,7 @@ public class GalaxyKeyboardService extends InputMethodService
         });
     }
 
+    // Prediction for Special symbol
     private void doKittyOperation(String symbol) {
 
         List<PhraseModel> phraseList = isPredictionMode
